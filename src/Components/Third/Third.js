@@ -1,30 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import useIntersectionObserver from "../../custom-hooks/viewport";
 
 const FiveCardLayout = () => {
-    const [isVisible, setIsVisible] = useState(false);
-    const sectionRef = useRef(null);
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(sectionRef.current);
-          }
-        },
-        { threshold: 0.2 } // Trigger when 50% of the section is visible
-      );
-  
-      if (sectionRef.current) {
-        observer.observe(sectionRef.current);
-      }
-  
-      return () => {
-        if (sectionRef.current) {
-          observer.unobserve(sectionRef.current);
-        }
-      };
-    }, []);
+    const [sectionRef, isVisible] = useIntersectionObserver();
   return (
     <div className="flex my-10 flex-col items-center" ref={sectionRef}>
       <div className="flex flex-wrap gap-4 justify-center">
@@ -123,30 +101,7 @@ const FiveCardLayout = () => {
 };
 
 const TransitionSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(sectionRef.current);
-        }
-      },
-      { threshold: 0.5 } // Trigger when 50% of the section is visible
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+    const [sectionRef, isVisible] = useIntersectionObserver();
 
   return (
     <div className="bg-section-3 py-16 lg:py-40">

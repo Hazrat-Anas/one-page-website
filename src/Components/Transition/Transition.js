@@ -1,30 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import useIntersectionObserver from '../../custom-hooks/viewport';
 
 const TwoColumnTransition = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(sectionRef.current);
-        }
-      },
-      { threshold: 0.5 } // Trigger when 50% of the section is visible
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+    const [sectionRef, isVisible] = useIntersectionObserver();
 
   return (
 
@@ -35,7 +13,6 @@ const TwoColumnTransition = () => {
 
       <div className={`w-1/2 bg-bull overflow-hidden px-3 duration-1000 py-10 ${isVisible ? 'transition-transform translate-x-0' : '-translate-x-full'}`}>
      
-
       </div>
 
       {/* Right Column */}
