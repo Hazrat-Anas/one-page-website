@@ -28,6 +28,7 @@ video{
   font-size: 25px;
   color: white;
   font-weight: 500;
+  right: 0px;
 }
 
 button {
@@ -146,4 +147,25 @@ button:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.bg-header{
+  background-image: url('./assets/bg-header.png');
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-blend-mode: overlay; */
+}
+
+.nav-logo {
+  background-image: url('./assets/logo.png');
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logo{
+  width:85px;
+  height:96px;
 }
