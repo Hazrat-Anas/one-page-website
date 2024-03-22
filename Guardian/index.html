@@ -17,7 +17,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <title>Guardian Ai</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Bull Rocket</title>
         <script type="text/javascript" src="./assets/js/script.js" defer></script>
     </head>
     <body style="overflow-x: hidden;">
@@ -32,12 +35,15 @@
         <!--    </div>-->
         <!--</div>-->
         <div class="cursor" style="overflow-x: hidden;"></div>
-            <section class="hero-section kenburns-top" id="home" style="overflow-x: hidden;">
+            <section class="hero-section kenburns-top" id="home" style="overflow-x: hidden;overflow-y: hidden;">
+                <video style="position: absolute;" id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                    <source src="./assets/images/animated-video.mp4" type="video/mp4">
+                  </video>
                 <header class="header">
                     <nav class="navbar">
                         <diV class="left-side-menu">
                             <a href="#home">
-                                <img src="assets/images/logo.png" alt="logo">
+                                <img class="logo" src="assets/images/logo.png" alt="logo">
                             </a>
                         </diV>
                         <div class="center-menu">
@@ -61,23 +67,25 @@
                         </div>
                     </nav>
                 </header>
-                <div class="hero-wrap">
+                <div class="hero-wrap  " style="overflow: hidden;position: relative;display: flex;
+                flex-direction: column;align-items: center;">
+                   
                     <img src="assets/images/star.png" alt="" class="star-1">
                     <img src="assets/images/star-2.png" alt="" class="star-2">
                     <img src="assets/images/star-3.png" alt="" class="star-3">
-                    <div class="left">
+                    <div class="lef" style="text-align: center;" >
                         <h1>Bullrocket</h1>
-                        <p>A groundbreaking memcoin built on the Solana blockchain, emerges as a beacon of innovation and financial potential in the cryptocurrency landscape.</p>
-                        <div class="btn-group">
+                        <p class="landing-desc poppins-semibold">A groundbreaking memcoin built on the Solana blockchain, emerges as a beacon of innovation and financial potential in the cryptocurrency landscape.</p>
+                        <div class="btn-group" style="text-align: center;justify-content: center;">
                             <a href="https://app.uniswap.org/tokens/ethereum/0x304645590f197d99fad9fa1d05e7bcdc563e1378" class="btn">Buy Now <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                                 <path d="M1.61872 0.381282C1.27701 0.0395728 0.72299 0.0395728 0.381282 0.381282C0.0395728 0.72299 0.0395728 1.27701 0.381282 1.61872L1.61872 0.381282ZM11 11.875C11.4832 11.875 11.875 11.4832 11.875 11L11.875 3.125C11.875 2.64175 11.4832 2.25 11 2.25C10.5168 2.25 10.125 2.64175 10.125 3.125L10.125 10.125L3.125 10.125C2.64175 10.125 2.25 10.5168 2.25 11C2.25 11.4832 2.64175 11.875 3.125 11.875L11 11.875ZM0.381282 1.61872L10.3813 11.6187L11.6187 10.3813L1.61872 0.381282L0.381282 1.61872Z" fill="black"/>
                               </svg></span>
                             </a>
-                            <a href="https://www.dextools.io/app/en/ether/pair-explorer/0xf8112c3e34db7e8fd4b21c6d177ba3cd44a2e0f8" class="btn2">Chart</a>
+                            <a href="https://www.dextools.io/app/en/ether/pair-explorer/0xf8112c3e34db7e8fd4b21c6d177ba3cd44a2e0f8" class="btn2">See Charts</a>
                         </div>
                     </div>
-                    <div class="right">
-                        <img src="assets/images/hero-img.png" alt="">
+                    <div class="righ">
+                        <img style="height: 250px;width: auto;" height="300" width="400" class="landing-bull" src="assets/images/landing-bull.png" alt="">
                     </div>
                 </div>
             </section>
